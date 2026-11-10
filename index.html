@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ruleta aleatoria</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <main>
+    <h1>Ruleta aleatoria</h1>
+    <p class="sub">Soporta cientos o miles de entradas. El ganador se elige con aleatoriedad criptográfica.</p>
+    <div class="card">
+      <div class="stage">
+        <div class="pointer"></div>
+        <canvas id="c"></canvas>
+        <button class="hub" id="spin">GIRAR</button>
+      </div>
+      <div class="now" id="now">—</div>
+      <div class="winner" id="winner"></div>
+    </div>
+  </main>
+  <aside class="card">
+    <label for="list"><span>Entradas (una por línea)</span><span id="count">0</span></label>
+    <textarea id="list" placeholder="Escribe o pega tus entradas aquí..."></textarea>
+    <div class="row">
+      <button class="b" id="shuf">Mezclar</button>
+      <button class="b" id="clr">Vaciar</button>
+    </div>
+    <div class="chk"><input type="checkbox" id="rm" checked><label for="rm" style="margin:0;font-weight:400">Quitar al ganador de la lista</label></div>
+    <h3>Historial</h3>
+    <ol id="hist"></ol>
+  </aside>
+</div>
+<dialog id="dlg"><h2>Ganador</h2><div class="w" id="dw"></div><button class="b p" id="ok">Aceptar</button></dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
